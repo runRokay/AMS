@@ -12701,7 +12701,7 @@ Object.deepExtend = function (e, t) {
                 header: {type: "0"},
                 format: {isJson: !0, message: ""},
                 response: {menuType: "body", httpCodeType: 2, hadTest: !1},
-                toJson: {checkbox:  !0, raw: ""},//[liup]表单转源数据 JSON
+                toJson: {checkbox: !0, raw: ""},//[liup]表单转源数据 JSON
                 auth: {status: "0", basicAuth: {username: "", password: ""}},
                 filter: {shrink: l("translate")("012100010"), open: l("translate")("012100011")},
                 script: {}
@@ -21259,7 +21259,7 @@ Object.deepExtend = function (e, t) {
                                         j = this.lexer.showPosition ? "在第" + (c + 1) + "行发生解析错误 :<br/>" + this.lexer.showPosition() + "<br/>此处缺少" + k.join(", ") + "字符, 实际上确是一个 '" + this.terminals_[h] + "'" : "在第" + (c + 1) + "行发生解析错误 : 本应该是 " + (1 == h ? "结尾输入" : "'" + (this.terminals_[h] || h) + "'"), this.parseError(j, {
                                             text: this.lexer.match,
                                             token: this.terminals_[h] || h,
-                                            line: this.lexer.yylineno,olinker.directive
+                                            line: this.lexer.yylineno,//olinker.directive,
                                             loc: m,
                                             expected: k
                                         })
@@ -22835,14 +22835,15 @@ Object.deepExtend = function (e, t) {
                                 i.paramType = "13";
                                 for (var s in e[r]) {
                                     "author-riverLethe-double-slash-note" == e[r][s] && (i.paramName = s);
-                                    break
+                                    break;
                                 }
                                 break;
                             case"Array":
                                 if (i.paramType = "12", e[r].length > 0) for (var s in e[r][0]) {
                                     "author-riverLethe-double-slash-note" == e[r][0][s] && (i.paramName = s, e[r].splice(0, 1));
-                                    break
+								
                                 }
+								break;
                         }
                         n.preItem = i, i[data.input.key] = a ? a + ">>" + r : r, data.output.push(i), data.fun.format["default"](e[r], t + 1, a ? a + ">>" + r : r)
                     } else n.preItem.paramName = r
