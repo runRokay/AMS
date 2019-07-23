@@ -24,7 +24,7 @@ CREATE TABLE `eo_api` (
   `updateUserID` int(11) NOT NULL DEFAULT '0',
   `mockRule` text COLLATE utf8_bin,
   `mockResult` text COLLATE utf8_bin,
-  `mockConfig` text COLLATE utf8_bin,
+  `mockConfig` mediumtext COLLATE utf8_bin,
   `apiSuccessStatusCode` varchar(255) DEFAULT '200',
   `apiFailureStatusCode` varchar(255) DEFAULT '200',
   `beforeInject` text NULL,
